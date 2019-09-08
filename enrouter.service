@@ -1,0 +1,12 @@
+[Unit]
+Description=Enrouter service
+After=network.target
+After=network-online.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/root/enrouter/enrouter.sh
+
+[Install]
+WantedBy=multi-user.target
